@@ -37,13 +37,22 @@ namespace InterfaceExercise
 
             //Now, create objects of your 3 classes and give their members values.
             //Creatively display and organize their values
-            
+
+            var civic = new Car { HasTrunk = true, AutoTransmission = false, TypeOfFuel = "Gas", Color = "Blue", NumberOfDoors = 2, NumberOfWheels = 4, Name = "ABC Comapny", HasFleet = true };
+            var f150 = new Truck { HasBedLiner = false, TowCapacity = 6000, TypeOfFuel = "Diesel", Color = "White", NumberOfDoors = 2, NumberOfWheels = 4, Name = "XZY LLC", HasFleet = false };
+            var crv = new SUV { HasRoofRack = true, RemovableSeats = false, TypeOfFuel = "Hybrid", Color = "Silver", NumberOfDoors = 5, NumberOfWheels = 4, Name = "Easy Inc", HasFleet = true };
+
             //Option for displaying values: 
             //Create a stubbed out method called DisplayDetails in your IVehicle interface.
             //Implement the stubbed out method in the derived classes.
             //In the scope of them method, use string interpolation to display property values.
             //In order to also interpolate values from ICompany, research how to extend interfaces.
-            
+
+            civic.DisplayDetails("Civic");
+            f150.DisplayDetails("F-150");
+            crv.DisplayDetails("CRV");
+
+            Console.ReadKey();
         }
     }
 }
